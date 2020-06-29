@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!--Head-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!--Stylesheet Verlinkung-->
+    <link rel="stylesheet" href="../stylesheet/style.css">
+    <!--Logo im Tab-->
+    <link rel="icon" type="icon" sizes="32x32" href="../assets/logo.png">
+    <!--Name der Webseite-->
+    <title>Discover Zürich</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--Bootstrap Javascript-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <!--Script von dem Slide Button und der Hamburger Naviagation-->
+    <script>
+        /* Animation von Slide Down Button */
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+        /* Naviagtion Hamburuger */
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+    <style>
+        /* Fliesstext der Aufzählungen */
+        p {
+            color: #818181;
+            font-size: 18px;
+            padding-top: 10px;
+            line-height: 150%
+        }
+
+        /* Titel der Aufzählungen */
+        h5 {
+            font-size: 18px;
+            color: #616161;
+            font-family: 'Stardos Stencil', cursive;
+
+        }
+
+        /* Kleine Navbar (Beinhaltet Restaurants, Clubs, Events und Museen) */
+
+        .nav2 {
+            display: inline;
+            padding: 15px;
+            text-align: center;
+            margin: auto 0;
+            color: #616161;
+            margin-bottom: 40px;
+        }
+
+
+        li a {
+            text-decoration: none;
+            color: #616161;
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+
+        /* Hauptnavigation  Korrekturen */
+        .navbar a {
+            padding: 7px;
+            color: white;
+            font-size: 1.1em;
+            text-decoration: none;
+            text-align: right;
+            margin: 11px;
+            text-transform: uppercase;
+            border-radius: 3px
+        }
+
+        .abschnitt {
+            margin-bottom: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="myHeader">
+        <!--Logo von der Navigation-->
+        <logo class="logo">
+            <a href="index.html"> <img src="../assets/logo.png"> </a>
+        </logo>
+        <!--Navigation-->
+        <nav class="nav">
+            <div class="navbar">
+                <a class="navigation" href="index.html">Home</a>
+                <a class="navigation" href="bekannt.html">Bekanntesten Orte in Zürich</a>
+                <a class="navigation" href="zuerich_entecken.html">Entdecke Zürich</a>
+                <a class="navigation" href="ueberuns.html">Über uns</a>
+            </div>
+        </nav>
+        <!--Hamburger Navigation-->
+        <span class="hamburger" onclick="openNav()">☰</span>
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="bekannt.html">Bekanntesten Orte in Zürich</a>
+                <a href="zuerich_entecken.html">Entdecke Zürich</a>
+                <a href="ueberuns.html">Über uns</a>
+            </div>
+        </div>
+    </header>
+
+    <!--Hauptbild -->
+    <headerbild class="hauptbild">
+        <img class="responsive" src="../assets/moeve_.jpg" alt="Möve">
+    </headerbild>
+
+    <!-- Scroll-Arrow -->
+    <div class="homebild"></div>
+    <section id="scroll" class="demo">
+        <a href="#inhalt"><span></span><span></span><span></span></a>
+    </section>
+
+    <!-- Inhalt -->
+    <main id="inhalt" class="inhalt">
+
+        <!--Haupttitel-->
+        <div class="einleitung">
+            <div class="haupttitel">
+                <h2>Entdecken Sie Zürich in anderen Augen</h2>
+            </div>
+            <!--Einfürung-->
+        </div class="einfuerung">
+        <p class="einfuerungstext"> Entecke Zürich auch in den Augen der Bewohner <br> Finden Sie hier leckere
+            Restaurants und Attraktionen! </p>
+
+        <!-- Zweites Video-->
+        <video class="videos" src="../videos/zürich_1.mp4" controls poster="../videos/video_2_bild.png" width="853px"
+            height="480px"></video>
+
+        <!-- Zweite & Kleine Navigation-->
+        <div class="zweitenavbar">
+            <ul class="kleinenavbar">
+                <li class="nav2"><a href="#restaurants">Restaurants</a></li>
+                <li class="nav2"><a href="#events">Events</a></li>
+                <li class="nav2"><a href="#clubs">Clubs</a></li>
+                <li class="nav2"><a href="#museum">Mueseen</a></li>
+            </ul>
+        </div>
+        <!--Abschnitt Restaurants-->
+        <section class="abschnitt">
+            <div id="restaurants">
+                <img id="bilderdeko" src="../assets/restaurant.jpg" alt="Restaurant">
+            </div>
+            <h5>Burger Meister</h5>
+            <div class="aufzaehlungen">
+                <p> Die besten Burger von Zürich geniessen Sie beim BURGERMEISTER. Probieren Sie unsere
+                    hausgemachten, täglich frischen zubereitete Burger in der Nähe der Sihlpost. </p>
+            </div>
+            <br>
+            <br>
+            <div id="restaurants">
+            </div>
+            <h5>Hiltl Restaurant</h5>
+            <div class="aufzaehlungen">
+                <p>Seit 1898 an der Sihlstrasse in Zürich: Haus Hiltl, unser Flaggschiff mit hauseigener Küche und
+                    Konditorei - kommen Sie rein und schauen Sie sich um.</p>
+            </div>
+            <br>
+            <br>
+            <div id="restaurants">
+            </div>
+            <h5>Stripped Pizza</h5>
+            <div class="aufzaehlungen">
+                <p>Erleben Sie die leckersten Pizzen Zürichs. In Stripped Pizza gibt es die ausgefallensten Pizzen
+                    des Landes. </p>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <!--Abschnitt Events-->
+        <section class="abschnitt">
+            <div id="events">
+                <img id="bilderdeko1" src="../assets/event.jpg" alt="Events" style="float: right;">
+            </div>
+            <div class="left">
+                <h5>Zürich Film Festival</h5>
+                <div class="aufzaehlungen">
+                    <p>Erstmals im Oktober 2005 durchgeführt, hat es sich innerhalb kürzester Zeit fest in der
+                        nationalen und internationalen Festivalszene etabliert. Ziel des Zurich Film Festival ist
+                        es, einem grösseren Publikum einen Einblick in die Arbeit junger, aufstrebender Filmemacher
+                        aus aller Welt zu bieten. </p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div id="events">
+            </div>
+            <div class="left">
+                <h5>Zürich Festival Digital</h5>
+                <div class="aufzaehlungen">
+                    <p>Die Zürcher Festspiele werden alle zwei Jahre gemeinsam mit den Zürcher Kulturinstitutionen
+                        wie dem Opernhaus Zürich, dem Schauspielhaus (Stadttheater), dem Tonhalle-Orchester
+                        (Konzertsaal) und dem Kunsthaus Zürich (Kunstmuseum) veranstaltet..</p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div id="events">
+            </div>
+            <div class="left">
+                <h5>Sechseläuten</h5>
+                <div class="aufzaehlungen">
+                    <p> Dieser Zürcher Frühlingsbrauch erhielt seinen ungewöhnlichen Namen von dem Brauch des
+                        vierzehnten Jahrhunderts, um sechs Uhr abends eine Grossmünsterglocke zu läuten, um das Ende
+                        des Arbeitstages des Sommersemesters auszurufen. </p>
+                </div>
+            </div>
+        </section>
+        <!--Abschnitt Clubs-->
+        <section class="abschnitt">
+            <div id="clubs">
+                <img id="bilderdeko" src="../assets/club.jpg" alt="Club">
+            </div>
+            <h5>Plaza Club</h5>
+            <div class="aufzaehlungen">
+                <p> Das Gebäude, in dem einst Zürichs erstes Filmtheater untergebracht war, ist heute ein beliebter
+                    Ort zum Tanzen - auf Partys ebenso wie bei Live-Konzerten.</p>
+            </div>
+            </div>
+            <br>
+            <br>
+            <div id="clubs">
+            </div>
+            <h5>Kaufleuten</h5>
+            <div class="aufzaehlungen">
+                <p>Konzerte, Lesungen und Kabarett mit aussergewöhnlichen Künstlerinnen und Künstlern aus aller
+                    Welt. Kultur auf höchstem Niveau -mitreissend, singstiftend und horizonterweiternd.</p>
+            </div>
+            </div>
+            <br>
+            <br>
+            <div id="clubs">
+            </div>
+            <h5>Mascotte</h5>
+            <div class="aufzaehlungen">
+                <p class>Zürichs ältester Club ist legendär - Josephine Baker und Louis Armstrong traten hier auf,
+                    der "Corso"-Schriftzug wurde von keinem Geringeren als Max Bill geschaffen, und auch in der
+                    jüngeren Geschichte sind illustre Namen keine Seltenheit..</p>
+            </div>
+            </div>
+        </section>
+        <br>
+        <!--Abschnitt Museen-->
+        <section class="abschnitt">
+            <div id="museum">
+                <img id="bilderdeko1" src="../assets/museum.jpg" alt="Museum" style="float: right;">
+            </div>
+            <div class="left">
+                <h5>Swiss National Museum</h5>
+                <div class="aufzaehlungen">
+                    <p>Das Schweizerische Landesmuseum - Teil der Musée-Suisse-Gruppe, die ihrerseits dem Bundesamt
+                        für Kultur angegliedert ist - befindet sich in der Stadt Zürich, der grössten Stadt der
+                        Schweiz, neben dem Hauptbahnhof.</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div id="museum">
+            </div>
+            <div class="left">
+                <h5>Museum für Gestaltung Zürich</h5>
+                <div class="aufzaehlungen">
+                    <p>Das Museum für Gestaltung, Zürich ist ein Museum für Industriedesign, visuelle Kommunikation,
+                        Architektur und Handwerk in Zürich, Schweiz.</p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <div id="museum">
+            </div>
+            <div class="left">
+                <h5>FIFA World Football Museum</h5>
+                <div class="aufzaehlungen">
+                    <p>Das FIFA-Weltfussballmuseum ist ein Verbandsfussballmuseum, das der FIFA gehört und von ihr
+                        betrieben wird. Das Museum befindet sich in Zürich, Schweiz, gegenüber dem Hauptsitz der
+                        FIFA. Es wurde am 28. Februar 2016 eröffnet. </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Footer beinhaltet Verlinkungen-->
+    <footer>
+        <a class="footertext" href="https://www.zuerich.com/de" target="_blank">Hauptquelle Text</a>
+        <a class="footertext" href="https://unsplash.com/" target="_blank">Hauptquelle Bilder</a>
+
+    </footer>
+</body>
+
+</html>

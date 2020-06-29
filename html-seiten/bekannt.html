@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!--Head-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!--Stylesheet Verlinkung-->
+    <link rel="stylesheet" href="../stylesheet/style.css">
+    <!--Logo im Tab-->
+    <link rel="icon" type="icon" sizes="32x32" href="../assets/logo.png">
+    <!--Name der Webseite-->
+    <title>Discover Zürich</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--Bootstrap Javascript-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+
+    <!--Script von dem Slide Button und der Hamburger Naviagation-->
+    <script>
+        /* Animation von Slide Down Button */
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+        /* Naviagtion Hamburuger */
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+    <style>
+        /* Hauptnavigation  Korrekturen */
+        .navigation:hover {
+            background-color: rgb(40, 58, 75);
+            transition: .5s;
+
+        }
+
+        .navbar a {
+            padding: 7px;
+            color: white;
+            font-size: 1.1em;
+            text-decoration: none;
+            text-align: right;
+            margin: 11px;
+            text-transform: uppercase;
+            border-radius: 3px
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="myHeader">
+        <!--Logo von der Navigation-->
+        <logo class="logo">
+            <a href="index.html"> <img src="../assets/logo.png"> </a>
+        </logo>
+        <!--Navigation-->
+        <nav class="nav">
+            <div class="navbar">
+                <a class="navigation" href="index.html">Home</a>
+                <a class="navigation" href="bekannt.html">Bekanntesten Orte in Zürich</a>
+                <a class="navigation" href="zuerich_entecken.html">Entdecke Zürich</a>
+                <a class="navigation" href="ueberuns.html">Über uns</a>
+            </div>
+        </nav>
+        <!--Hamburger Navigation-->
+        <span class="hamburger" onclick="openNav()">☰</span>
+
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="bekannt.html">Bekanntesten Orte in Zürich</a>
+                <a href="zuerich_entecken.html">Entdecke Zürich</a>
+                <a href="ueberuns.html">Über uns</a>
+            </div>
+        </div>
+
+
+    </header>
+
+    <!--Hauptbild -->
+    <headerbild class="hauptbild">
+        <img class="responsive" src="../assets/uhr.jpg" alt="Uhr">
+    </headerbild>
+
+    <!-- Scroll-Arrow -->
+    <section id="scroll" class="demo">
+        <a href="#inhalt"><span></span><span></span><span></span></a>
+    </section>
+
+
+    <!-- Inhalt -->
+    <main id="inhalt" class="inhalt">
+
+        <!--Haupttitel-->
+        <div class="einleitung">
+            <div class="haupttitel">
+                <h2>Bakanntesten Orte in Zürich</h2>
+            </div>
+            <!--Einfürung-->
+        </div class="einfuerung">
+        <p class="einfuerungstext">Wollen Sie meist bekannten Orte besuchen <br> damit Sie ja nichts verpassen?</p>
+        <!--Tabelle-->
+        <div class="card" style="width: 20rem;">
+            <div class="card-header"> Beliebstesten Orte Zürichs </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">1# Bahnhofstrasse </li>
+                <li class="list-group-item">2# Zürichsee</li>
+                <li class="list-group-item">3# Swiss National Museum</li>
+            </ul>
+        </div>
+        <article>
+            <!--Flexboxen-->
+            <div class="flexbox">
+                <img id="flexboxbild" src="../assets/see.jpg" alt="Zürichsee">
+                <h6 class="titelflexbox">Zürichsee</h6>
+                <p class="fliesstextflexbox">Der Zürichsee gehört nach dem Genfersee, dem Neuenburgersee, dem
+                    Bodensee
+                    und dem Vierwaldstättersee zu den "Big Five" der Schweiz, was die Seen betrifft. Früher wurde er
+                    vor allem als Verkehrs- und Transportweg genutzt, heute ist er ein beliebtes Ausflugsziel zum
+                    Baden, Segeln, Bootfahren und Picknicken am Ufer.
+                </p>
+                <a href="https://www.zuerich.com/de" target="_blank"><button type="button" class="btn btn-dark">Erfahre
+                        Mehr!</button></a>
+            </div>
+
+
+            <div class="flexbox">
+                <img id="flexboxbild" src="../assets/oldtown.jpg" alt="Bahnhofstrasse">
+                <h6 class="titelflexbox">Altstadt</h6>
+                <p class="fliesstextflexbox"> Das historische Herz der Stadt schlägt auf beiden Seiten der Limmat,
+                    wo
+                    Zunfthäuser, Kirchen und historische Plätze die romantischen Gässchen säumen und die versteckten
+                    Winkel zieren. Vom Zürcher Hauptbahnhof aus können Sie die Altstadt - darunter das berühmte
+                    "Niederdorf" - bequem auf eigene Faust entdecken.
+                </p>
+                <a href="https://www.zuerich.com/de" target="_blank"><button type="button" class="btn btn-dark">Erfahre
+                        Mehr!</button></a>
+            </div>
+            <div class="flexbox">
+                <img id="flexboxbild" src="../assets/lindenhof.jpg" alt="Lindenhof">
+                <h6 class="titelflexbox">Lindenhof</h6>
+                <p class="fliesstextflexbox">Dieser Platz bietet einen herrlichen Blick auf die Altstadt, die
+                    Grossmünsterkirche, die Limmat, die Universität und die Eidgenössische Technische
+                    Hochschule. Der Lindenhof war auch Schauplatz zahlreicher historischer Ereignisse. Im 4.
+                    Jahrhundert stand auf dem Lindenhof ein römisches Kastell - und der
+                    Enkel Karls des Grossen an derselben Stelle.
+                </p>
+                <a href="https://www.zuerich.com/de" target="_blank"><button type="button" class="btn btn-dark">Erfahre
+                        Mehr!</button></a>
+            </div>
+        </article>
+        <article>
+            <div class="flexbox">
+                <img id="flexboxbild" src="../assets/grossmuenster.jpg" alt="Bahnhofstrasse">
+                <h6 class="titelflexbox">Grossmünster</h6>
+                <p class="fliesstextflexbox"> Steigen Sie vom Kirchenschiff aus die 187 Stufen hinauf und geniessen
+                    Sie
+                    von der Panoramaplattform einen Ausblick über die Zürcher Altstadt und den See. Man kann
+                    hier leiden nicht Nachts hochgehen, allerdings eignet sich dieser Ort für eine Sonnenfinsternis.
+                </p>
+                <a href="https://www.zuerich.com/de" target="_blank"><button type="button" class="btn btn-dark">Erfahre
+                        Mehr!</button></a>
+            </div>
+
+            <div class="flexbox">
+                <img id="flexboxbild" src="../assets/bahnhofstrasse.jpg" alt="sky full with stars">
+                <h6 class="titelflexbox">Bahnhofstrasse</h6>
+                <p class="fliesstextflexbox">Die weltbekannte Shopping-Meile entstand nach der Errichtung des
+                    Hauptbahnhofs Zürich. An der Stelle, wo vor 150 Jahren der Stadtbefestigungsgraben war,
+                    verbindet sie heute auf 1.4 Kilometern den Zürichsee mit dem Hauptbahnhof.
+                </p>
+                <a href="https://www.zuerich.com/de" target="_blank"><button type="button" class="btn btn-dark">Erfahre
+                        Mehr!</button></a>
+            </div>
+            <div class="flexbox">
+                <img id="flexboxbild" src="../assets/primetower1.jpg" alt="sky full with stars">
+                <h6 class="titelflexbox">Clouds (Prime Tower Restaurant)</h6>
+                <p class="fliesstextflexbox">Das Angebot in 120 Metern Höhe über der Stadt geht weit über das eines
+                    Casual-Restaurants hinaus. Ein Bistro und eine Bar versprechen bei Sonnenuntergang eine
+                    spektakuläre Aussicht auf die Stadt, den Zürichsee, der Hardbrücke, Oerlikon und den Alpen.
+                </p>
+                <a href="https://www.zuerich.com/de" target="_blank"><button type="button" class="btn btn-dark">Erfahre
+                        Mehr!</button></a>
+            </div>
+        </article>
+        </section>
+    </main>
+</body>
+
+</html>
