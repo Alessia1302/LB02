@@ -1,0 +1,595 @@
+/*Schrift*/
+@import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: rgb(30, 30, 32);
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.footertext {
+    text-decoration: none;
+    color: #cecece;
+    font-family: 'Stardos Stencil', cursive;
+    padding-left: 40px;
+    margin: 10px;
+}
+
+.footertext:hover {
+    text-decoration: none;
+    transform: 5s;
+    color: white;
+}
+
+/*Navigation*/
+/*Navigation*/
+
+.navbar {
+    padding: 25px 50px 0px 0px;
+    text-align: right !important;
+}
+
+.navbar a {
+    padding: 7px;
+    color: white;
+    font-size: 1.1rem !important;
+    text-decoration: none;
+    text-align: right;
+    margin: 11px;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.navigation:hover {
+    background-color: rgb(40, 58, 75);
+    transition: .5s;
+}
+
+.navigation.a:active {
+    background-color: rgb(40, 58, 75);
+}
+
+#myNav {
+    background-color: rgb(30, 30, 32);
+    transition: .5s;
+    opacity: 70%;
+    font-size: 1.3rem;
+}
+
+.nav {
+    background-color: rgb(30, 30, 32);
+    height: 80px;
+    width: 75%;
+}
+
+.navbar {
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.navbar {
+    align-items: right !important;
+}
+
+/*Navigation Ende*/
+/*Navigation Ende*/
+
+
+
+/* Header */
+/* Header */
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    z-index: 10;
+}
+
+.logo {
+    background-color: rgb(30, 30, 32);
+    height: 80px;
+    width: 25%;
+    padding-left: 5%;
+    padding-top: 0px;
+}
+
+.logo img {
+    width: 90px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 50px;
+    margin-top: -73px;
+    margin-left: 20px;
+    cursor: pointer;
+    line-height: 1.2;
+}
+
+/* Header Ende */
+/* Header Ende*/
+
+
+/* Responsive Design, Hamburger, Overlay */
+@media screen and (max-width: 1250px) {
+
+
+    .logo {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 32px;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .nav {
+        display: none !important;
+    }
+
+    .hamburger {
+        display: block;
+        transition: 0.5s;
+        line-height: 1.2;
+    }
+}
+
+/*  Container für Scrollpunkt. */
+/*  Container für Scrollpunkt. */
+
+.inhalt {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/* Hamburger Overlay */
+/* Hamburger Overlay */
+
+.overlay {
+    text-decoration: none !important;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: -10px;
+    right: 25px;
+    font-size: 60px;
+}
+
+
+section::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .3) 80%, rgba(0, 0, 0, .3) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .3) 80%, rgba(0, 0, 0, .3) 100%);
+}
+
+/* Hamburger Overlay Ende */
+/* Hamburger Overlay Ende */
+
+/* Scroll Headerbild */
+/* Scroll Headerbild */
+#scroll a {
+    padding-top: 30px;
+}
+
+#scroll a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb07 2s infinite;
+    animation: sdb07 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+#scroll a span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+#scroll a span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+}
+
+#scroll a span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+
+/* Scroll Headerbild Ende */
+/* Scroll Headerbild  Ende*/
+
+/* Scrolldown Button*/
+/* Scrolldown Button*/
+
+@-webkit-keyframes sdb07 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes sdb07 {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.demo a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font: normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+
+.demo a:hover {
+    opacity: .5;
+}
+
+/* Scrolldown Button Ende*/
+/* Scrolldown Button Ende */
+
+/*  Container für Scrollpunkt. */
+/*  Container für Scrollpunkt. */
+
+.inhalt {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.hauptbild {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 91vh;
+}
+
+.hauptbild img {
+    width: 100%;
+    height: 102%;
+
+}
+
+.einleitung {
+    display: flex !important;
+    flex-flow: row wrap !important;
+    padding: 20px 20% 0 20%;
+}
+
+/*  Container für Scrollpunkt Ende */
+/*  Container für Scrollpunkt Ende */
+
+/*  Titel, Fliesstext (h1, h3, h5 )*/
+/*  Titel, Fliesstext (h1, h3, h5 )*/
+
+h1 {
+    padding-top: 80px;
+    font-size: 6.7em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 120px;
+    color: rgb(116, 116, 116);
+}
+
+h5 {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.h2,
+h2 {
+    font-size: 74px !important;
+    margin-left: 78px;
+    align-items: center;
+}
+
+/*  Titel, Fliesstext (h1, h3, h5 ) Ende */
+/*  Titel, Fliesstext (h1, h3, h5 ) Ende*/
+
+/*  Seite Zürich Entdecken Anpassungen*/
+/*  Seite Zürich Entdecken Anpassungen*/
+
+.kleinenavbar {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    margin: auto;
+    padding-left: 30px;
+}
+
+li a:hover {
+    transition: .5s;
+    color: #818181;
+    text-decoration: none;
+}
+
+.einfuerungstext {
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 150px;
+    line-height: 150%;
+    font-size: 32px;
+    color: #818181;
+    font-family: 'Stardos Stencil', cursive;
+}
+
+.haupttitel {
+    text-align: center !important;
+    font-size: 54px !important;
+    color: #616161;
+    padding-top: 100px;
+    line-height: 150%;
+    font-family: 'Stardos Stencil', cursive;
+}
+
+.einfuerung {
+    display: inline-block;
+    font-family: 'Stardos Stencil', cursive;
+}
+
+#bilderdeko {
+    height: 25%;
+    width: 25%;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+    min-width: 412px;
+    min-height: 515px;
+}
+
+.fliestext {
+    text-align: left;
+    font-size: 22px;
+    padding-left: 20px;
+    line-height: 160%;
+    padding-top: 70px;
+    color: #818181;
+
+}
+
+.zweitenavbar {
+    display: flex;
+    margin: auto;
+}
+
+.aufzaehlungen {
+    max-width: 1200px;
+
+}
+
+#bilderdeko1 {
+    height: 25%;
+    width: 25%;
+    float: left;
+    margin-left: 40px;
+    margin-bottom: 100px;
+    margin-right: 200px;
+    min-width: 412px;
+    min-height: 515px;
+}
+
+.left {
+    margin-left: 200px;
+}
+
+/*  Seite Zürich Entdecken Anpassungen Ende*/
+/*  Seite Zürich Entdecken Anpassungen Ende*/
+
+
+/* Flexboxen */
+/*  Flexboxen */
+
+
+.flexbox {
+    max-width: 400px;
+    max-height: 1000px;
+    float: left;
+    margin: 30px;
+
+}
+
+#flexboxbild {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    margin: auto;
+}
+
+.titelflexbox {
+    font-size: 24px;
+    color: #616161;
+    line-height: 150%;
+    padding-top: 15px;
+    font-family: 'Stardos Stencil', cursive;
+    text-align: center;
+}
+
+.fliesstextflexbox {
+    font-size: 18px;
+    text-align: center;
+    color: #818181;
+    line-height: 150%;
+}
+
+article {
+    padding-left: 128.5px;
+}
+
+
+/* Flexboxen Ende */
+/*  Flexboxen  Ende*/
+
+
+/*Restliches*/
+/*Restliches*/
+
+span {
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.responsive {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+}
+
+
+
+.videos {
+    display: flex;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+button {
+    margin: auto !important;
+    display: flex !important;
+    text-decoration: none !important;
+}
+
+.card {
+    display: flex;
+    margin: auto;
+    width: 700px;
+    margin-bottom: 90px;
+}
+
+ul {
+    text-align: center;
+    color: #818181;
+    font-family: 'Stardos Stencil', cursive;
+
+}
+
+.card-header {
+    text-align: center;
+    background-color: rgb(30, 30, 32);
+    font-family: 'Stardos Stencil', cursive;
+}
+
+.abstand {
+    margin-bottom: 300px;
+}
+
+/*Restliches Ende*/
+/*Restliches Ende*/
